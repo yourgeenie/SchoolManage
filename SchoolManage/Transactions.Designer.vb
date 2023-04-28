@@ -40,6 +40,9 @@ Partial Class Transactions
         txtTransDate = New TextBox()
         txtTransMethod = New TextBox()
         txtAmount = New TextBox()
+        btnExport = New Button()
+        btnBackUp = New Button()
+        btnUpload = New Button()
         CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
@@ -49,11 +52,11 @@ Partial Class Transactions
         DataGridView1.BackgroundColor = SystemColors.ButtonHighlight
         DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         DataGridView1.Columns.AddRange(New DataGridViewColumn() {transID, subCode, studID, amount, transDate, transMethod})
-        DataGridView1.Location = New Point(89, 173)
+        DataGridView1.Location = New Point(89, 212)
         DataGridView1.Name = "DataGridView1"
         DataGridView1.RowHeadersWidth = 51
         DataGridView1.RowTemplate.Height = 29
-        DataGridView1.Size = New Size(785, 505)
+        DataGridView1.Size = New Size(785, 466)
         DataGridView1.TabIndex = 31
         ' 
         ' transID
@@ -191,11 +194,44 @@ Partial Class Transactions
         txtAmount.Size = New Size(141, 27)
         txtAmount.TabIndex = 37
         ' 
+        ' btnExport
+        ' 
+        btnExport.FlatStyle = FlatStyle.Flat
+        btnExport.Location = New Point(351, 174)
+        btnExport.Name = "btnExport"
+        btnExport.Size = New Size(250, 29)
+        btnExport.TabIndex = 40
+        btnExport.Text = "Export Data"
+        btnExport.UseVisualStyleBackColor = True
+        ' 
+        ' btnBackUp
+        ' 
+        btnBackUp.FlatStyle = FlatStyle.Flat
+        btnBackUp.Location = New Point(607, 174)
+        btnBackUp.Name = "btnBackUp"
+        btnBackUp.Size = New Size(267, 29)
+        btnBackUp.TabIndex = 39
+        btnBackUp.Text = "Back Up Data"
+        btnBackUp.UseVisualStyleBackColor = True
+        ' 
+        ' btnUpload
+        ' 
+        btnUpload.FlatStyle = FlatStyle.Flat
+        btnUpload.Location = New Point(89, 174)
+        btnUpload.Name = "btnUpload"
+        btnUpload.Size = New Size(256, 29)
+        btnUpload.TabIndex = 38
+        btnUpload.Text = "Import Data"
+        btnUpload.UseVisualStyleBackColor = True
+        ' 
         ' Transactions
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(1331, 770)
+        Controls.Add(btnExport)
+        Controls.Add(btnBackUp)
+        Controls.Add(btnUpload)
         Controls.Add(txtAmount)
         Controls.Add(txtTransMethod)
         Controls.Add(txtTransDate)
@@ -233,4 +269,7 @@ Partial Class Transactions
     Friend WithEvents transDate As DataGridViewTextBoxColumn
     Friend WithEvents transMethod As DataGridViewTextBoxColumn
     Friend WithEvents txtAmount As TextBox
+    Friend WithEvents btnExport As Button
+    Friend WithEvents btnBackUp As Button
+    Friend WithEvents btnUpload As Button
 End Class

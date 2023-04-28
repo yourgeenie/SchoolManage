@@ -35,6 +35,11 @@ Partial Class Professors
         btnAddProf = New Button()
         btnBack = New Button()
         btnRefresh = New Button()
+        btnExport = New Button()
+        txtLocate = New TextBox()
+        btnLocate = New Button()
+        btnBackUp = New Button()
+        btnUpload = New Button()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
@@ -54,11 +59,11 @@ Partial Class Professors
         DataGridView1.BackgroundColor = SystemColors.ButtonHighlight
         DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         DataGridView1.Columns.AddRange(New DataGridViewColumn() {profID, firstName, lastName, gender, email, contactNumber})
-        DataGridView1.Location = New Point(90, 174)
+        DataGridView1.Location = New Point(90, 207)
         DataGridView1.Name = "DataGridView1"
         DataGridView1.RowHeadersWidth = 51
         DataGridView1.RowTemplate.Height = 29
-        DataGridView1.Size = New Size(1150, 424)
+        DataGridView1.Size = New Size(1150, 391)
         DataGridView1.TabIndex = 12
         ' 
         ' profID
@@ -162,11 +167,63 @@ Partial Class Professors
         btnRefresh.Text = "REFRESH"
         btnRefresh.UseVisualStyleBackColor = False
         ' 
+        ' btnExport
+        ' 
+        btnExport.FlatStyle = FlatStyle.Flat
+        btnExport.Location = New Point(265, 172)
+        btnExport.Name = "btnExport"
+        btnExport.Size = New Size(168, 29)
+        btnExport.TabIndex = 17
+        btnExport.Text = "Export Data"
+        btnExport.UseVisualStyleBackColor = True
+        ' 
+        ' txtLocate
+        ' 
+        txtLocate.Location = New Point(787, 172)
+        txtLocate.Name = "txtLocate"
+        txtLocate.Size = New Size(453, 27)
+        txtLocate.TabIndex = 16
+        ' 
+        ' btnLocate
+        ' 
+        btnLocate.FlatStyle = FlatStyle.Flat
+        btnLocate.Location = New Point(613, 172)
+        btnLocate.Name = "btnLocate"
+        btnLocate.Size = New Size(168, 29)
+        btnLocate.TabIndex = 15
+        btnLocate.Text = "Locate Data"
+        btnLocate.UseVisualStyleBackColor = True
+        ' 
+        ' btnBackUp
+        ' 
+        btnBackUp.FlatStyle = FlatStyle.Flat
+        btnBackUp.Location = New Point(439, 172)
+        btnBackUp.Name = "btnBackUp"
+        btnBackUp.Size = New Size(168, 29)
+        btnBackUp.TabIndex = 14
+        btnBackUp.Text = "Back Up Data"
+        btnBackUp.UseVisualStyleBackColor = True
+        ' 
+        ' btnUpload
+        ' 
+        btnUpload.FlatStyle = FlatStyle.Flat
+        btnUpload.Location = New Point(90, 172)
+        btnUpload.Name = "btnUpload"
+        btnUpload.Size = New Size(168, 29)
+        btnUpload.TabIndex = 13
+        btnUpload.Text = "Import Data"
+        btnUpload.UseVisualStyleBackColor = True
+        ' 
         ' Professors
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(1331, 770)
+        Controls.Add(btnExport)
+        Controls.Add(txtLocate)
+        Controls.Add(btnLocate)
+        Controls.Add(btnBackUp)
+        Controls.Add(btnUpload)
         Controls.Add(DataGridView1)
         Controls.Add(btnDeleteProf)
         Controls.Add(btnEditProf)
@@ -180,6 +237,7 @@ Partial Class Professors
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         CType(DataGridView1, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
+        PerformLayout()
     End Sub
 
     Friend WithEvents PictureBox1 As PictureBox
@@ -195,4 +253,9 @@ Partial Class Professors
     Friend WithEvents gender As DataGridViewTextBoxColumn
     Friend WithEvents email As DataGridViewTextBoxColumn
     Friend WithEvents contactNumber As DataGridViewTextBoxColumn
+    Friend WithEvents btnExport As Button
+    Friend WithEvents txtLocate As TextBox
+    Friend WithEvents btnLocate As Button
+    Friend WithEvents btnBackUp As Button
+    Friend WithEvents btnUpload As Button
 End Class

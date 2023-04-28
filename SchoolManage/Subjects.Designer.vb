@@ -33,6 +33,9 @@ Partial Class Subjects
         btnBack = New Button()
         btnRefresh = New Button()
         PictureBox1 = New PictureBox()
+        btnExport = New Button()
+        btnBackUp = New Button()
+        btnUpload = New Button()
         CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
@@ -42,11 +45,11 @@ Partial Class Subjects
         DataGridView1.BackgroundColor = SystemColors.ButtonHighlight
         DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         DataGridView1.Columns.AddRange(New DataGridViewColumn() {subID, subCode, subName, courseID})
-        DataGridView1.Location = New Point(87, 191)
+        DataGridView1.Location = New Point(87, 230)
         DataGridView1.Name = "DataGridView1"
         DataGridView1.RowHeadersWidth = 51
         DataGridView1.RowTemplate.Height = 29
-        DataGridView1.Size = New Size(785, 482)
+        DataGridView1.Size = New Size(785, 443)
         DataGridView1.TabIndex = 26
         ' 
         ' subID
@@ -146,11 +149,44 @@ Partial Class Subjects
         PictureBox1.TabIndex = 20
         PictureBox1.TabStop = False
         ' 
+        ' btnExport
+        ' 
+        btnExport.FlatStyle = FlatStyle.Flat
+        btnExport.Location = New Point(349, 192)
+        btnExport.Name = "btnExport"
+        btnExport.Size = New Size(250, 29)
+        btnExport.TabIndex = 29
+        btnExport.Text = "Export Data"
+        btnExport.UseVisualStyleBackColor = True
+        ' 
+        ' btnBackUp
+        ' 
+        btnBackUp.FlatStyle = FlatStyle.Flat
+        btnBackUp.Location = New Point(605, 192)
+        btnBackUp.Name = "btnBackUp"
+        btnBackUp.Size = New Size(267, 29)
+        btnBackUp.TabIndex = 28
+        btnBackUp.Text = "Back Up Data"
+        btnBackUp.UseVisualStyleBackColor = True
+        ' 
+        ' btnUpload
+        ' 
+        btnUpload.FlatStyle = FlatStyle.Flat
+        btnUpload.Location = New Point(87, 192)
+        btnUpload.Name = "btnUpload"
+        btnUpload.Size = New Size(256, 29)
+        btnUpload.TabIndex = 27
+        btnUpload.Text = "Import Data"
+        btnUpload.UseVisualStyleBackColor = True
+        ' 
         ' Subjects
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(1331, 770)
+        Controls.Add(btnExport)
+        Controls.Add(btnBackUp)
+        Controls.Add(btnUpload)
         Controls.Add(DataGridView1)
         Controls.Add(btnDeleteSub)
         Controls.Add(btnEditSub)
@@ -177,4 +213,7 @@ Partial Class Subjects
     Friend WithEvents btnBack As Button
     Friend WithEvents btnRefresh As Button
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents btnExport As Button
+    Friend WithEvents btnBackUp As Button
+    Friend WithEvents btnUpload As Button
 End Class

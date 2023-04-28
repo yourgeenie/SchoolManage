@@ -38,6 +38,11 @@ Partial Class Schedules
         schedDay = New DataGridViewTextBoxColumn()
         timeStart = New DataGridViewTextBoxColumn()
         timeEnd = New DataGridViewTextBoxColumn()
+        btnExport = New Button()
+        txtLocate = New TextBox()
+        btnLocate = New Button()
+        btnBackUp = New Button()
+        btnUpload = New Button()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
@@ -115,11 +120,11 @@ Partial Class Schedules
         DataGridView1.BackgroundColor = SystemColors.ButtonHighlight
         DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         DataGridView1.Columns.AddRange(New DataGridViewColumn() {schedID, courseID, profID, subID, studID, schedDay, timeStart, timeEnd})
-        DataGridView1.Location = New Point(79, 161)
+        DataGridView1.Location = New Point(87, 208)
         DataGridView1.Name = "DataGridView1"
         DataGridView1.RowHeadersWidth = 51
         DataGridView1.RowTemplate.Height = 29
-        DataGridView1.Size = New Size(1174, 448)
+        DataGridView1.Size = New Size(1153, 391)
         DataGridView1.TabIndex = 6
         ' 
         ' schedID
@@ -177,11 +182,63 @@ Partial Class Schedules
         timeEnd.Name = "timeEnd"
         timeEnd.Width = 150
         ' 
+        ' btnExport
+        ' 
+        btnExport.FlatStyle = FlatStyle.Flat
+        btnExport.Location = New Point(262, 173)
+        btnExport.Name = "btnExport"
+        btnExport.Size = New Size(168, 29)
+        btnExport.TabIndex = 16
+        btnExport.Text = "Export Data"
+        btnExport.UseVisualStyleBackColor = True
+        ' 
+        ' txtLocate
+        ' 
+        txtLocate.Location = New Point(784, 173)
+        txtLocate.Name = "txtLocate"
+        txtLocate.Size = New Size(453, 27)
+        txtLocate.TabIndex = 15
+        ' 
+        ' btnLocate
+        ' 
+        btnLocate.FlatStyle = FlatStyle.Flat
+        btnLocate.Location = New Point(610, 173)
+        btnLocate.Name = "btnLocate"
+        btnLocate.Size = New Size(168, 29)
+        btnLocate.TabIndex = 14
+        btnLocate.Text = "Locate Data"
+        btnLocate.UseVisualStyleBackColor = True
+        ' 
+        ' btnBackUp
+        ' 
+        btnBackUp.FlatStyle = FlatStyle.Flat
+        btnBackUp.Location = New Point(436, 173)
+        btnBackUp.Name = "btnBackUp"
+        btnBackUp.Size = New Size(168, 29)
+        btnBackUp.TabIndex = 13
+        btnBackUp.Text = "Back Up Data"
+        btnBackUp.UseVisualStyleBackColor = True
+        ' 
+        ' btnUpload
+        ' 
+        btnUpload.FlatStyle = FlatStyle.Flat
+        btnUpload.Location = New Point(87, 173)
+        btnUpload.Name = "btnUpload"
+        btnUpload.Size = New Size(168, 29)
+        btnUpload.TabIndex = 12
+        btnUpload.Text = "Import Data"
+        btnUpload.UseVisualStyleBackColor = True
+        ' 
         ' Schedules
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(1331, 770)
+        Controls.Add(btnExport)
+        Controls.Add(txtLocate)
+        Controls.Add(btnLocate)
+        Controls.Add(btnBackUp)
+        Controls.Add(btnUpload)
         Controls.Add(DataGridView1)
         Controls.Add(btnDelSched)
         Controls.Add(btnAddSched)
@@ -195,6 +252,7 @@ Partial Class Schedules
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         CType(DataGridView1, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
+        PerformLayout()
     End Sub
 
     Friend WithEvents PictureBox1 As PictureBox
@@ -212,4 +270,9 @@ Partial Class Schedules
     Friend WithEvents schedDay As DataGridViewTextBoxColumn
     Friend WithEvents timeStart As DataGridViewTextBoxColumn
     Friend WithEvents timeEnd As DataGridViewTextBoxColumn
+    Friend WithEvents btnExport As Button
+    Friend WithEvents txtLocate As TextBox
+    Friend WithEvents btnLocate As Button
+    Friend WithEvents btnBackUp As Button
+    Friend WithEvents btnUpload As Button
 End Class

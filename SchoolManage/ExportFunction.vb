@@ -3,14 +3,14 @@ Imports System.IO
 
 Module ExportFunction
     Sub Export_Function(tableName As String)
-        Dim connectionString As String = "Server=localhost;Database=schoolms;Uid=root;Pwd=admin;"
+        Dim myConnectionString As String = "Server=localhost;Database=schoolms;Uid=root;Pwd=admin;"
 
-        Using connection As New MySqlConnection(connectionString)
-            connection.Open()
+        Using conn As New MySqlConnection(myConnectionString)
+            conn.Open()
 
             ' Retrieve the data from the database
             Dim query As String = "SELECT * FROM " + tableName
-            Dim command As New MySqlCommand(query, connection)
+            Dim command As New MySqlCommand(query, conn)
             Dim reader As MySqlDataReader = command.ExecuteReader()
 
             ' Prompt the user to choose a save file location
@@ -49,7 +49,7 @@ Module ExportFunction
             End If
 
             reader.Close()
-            connection.Close()
+            conn.Close()
         End Using
     End Sub
 
