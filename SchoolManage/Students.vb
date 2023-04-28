@@ -126,4 +126,9 @@ Public Class Students
             txtLocate.Text = openFileDialog1.FileName
         End If
     End Sub
+
+    Private Sub btnExport_Click(sender As Object, e As EventArgs) Handles btnExport.Click
+        Export_Function("students")
+
+    End Sub
 End Class

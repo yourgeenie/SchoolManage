@@ -24,17 +24,17 @@ Partial Class Professors
     Private Sub InitializeComponent()
         PictureBox1 = New PictureBox()
         DataGridView1 = New DataGridView()
-        btnDeleteProf = New Button()
-        btnEditProf = New Button()
-        btnAddProf = New Button()
-        btnBack = New Button()
-        btnRefresh = New Button()
         profID = New DataGridViewTextBoxColumn()
         firstName = New DataGridViewTextBoxColumn()
         lastName = New DataGridViewTextBoxColumn()
         gender = New DataGridViewTextBoxColumn()
         email = New DataGridViewTextBoxColumn()
         contactNumber = New DataGridViewTextBoxColumn()
+        btnDeleteProf = New Button()
+        btnEditProf = New Button()
+        btnAddProf = New Button()
+        btnBack = New Button()
+        btnRefresh = New Button()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
@@ -61,6 +61,47 @@ Partial Class Professors
         DataGridView1.Size = New Size(1150, 424)
         DataGridView1.TabIndex = 12
         ' 
+        ' profID
+        ' 
+        profID.HeaderText = "ID No."
+        profID.MinimumWidth = 6
+        profID.Name = "profID"
+        profID.Width = 80
+        ' 
+        ' firstName
+        ' 
+        firstName.HeaderText = "First Name"
+        firstName.MinimumWidth = 6
+        firstName.Name = "firstName"
+        firstName.Width = 200
+        ' 
+        ' lastName
+        ' 
+        lastName.HeaderText = "Last Name"
+        lastName.MinimumWidth = 6
+        lastName.Name = "lastName"
+        lastName.Width = 200
+        ' 
+        ' gender
+        ' 
+        gender.HeaderText = "Gender"
+        gender.MinimumWidth = 6
+        gender.Name = "gender"
+        gender.Width = 60
+        ' 
+        ' email
+        ' 
+        email.HeaderText = "Email"
+        email.MinimumWidth = 6
+        email.Name = "email"
+        email.Width = 300
+        ' 
+        ' contactNumber
+        ' 
+        contactNumber.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+        contactNumber.HeaderText = "Contact Number"
+        contactNumber.MinimumWidth = 6
+        contactNumber.Name = "contactNumber"' 
         ' btnDeleteProf
         ' 
         btnDeleteProf.BackColor = SystemColors.ButtonHighlight
@@ -114,54 +155,13 @@ Partial Class Professors
         btnRefresh.BackColor = SystemColors.ButtonHighlight
         btnRefresh.FlatStyle = FlatStyle.Flat
         btnRefresh.Font = New Font("Palatino Linotype", 10.8F, FontStyle.Bold, GraphicsUnit.Point)
-        btnRefresh.Location = New Point(93, 91)
+        btnRefresh.Location = New Point(94, 91)
         btnRefresh.Name = "btnRefresh"
         btnRefresh.Size = New Size(145, 33)
         btnRefresh.TabIndex = 7
         btnRefresh.Text = "REFRESH"
         btnRefresh.UseVisualStyleBackColor = False
         ' 
-        ' profID
-        ' 
-        profID.HeaderText = "ID No."
-        profID.MinimumWidth = 6
-        profID.Name = "profID"
-        profID.Width = 80
-        ' 
-        ' firstName
-        ' 
-        firstName.HeaderText = "First Name"
-        firstName.MinimumWidth = 6
-        firstName.Name = "firstName"
-        firstName.Width = 200
-        ' 
-        ' lastName
-        ' 
-        lastName.HeaderText = "Last Name"
-        lastName.MinimumWidth = 6
-        lastName.Name = "lastName"
-        lastName.Width = 200
-        ' 
-        ' gender
-        ' 
-        gender.HeaderText = "Gender"
-        gender.MinimumWidth = 6
-        gender.Name = "gender"
-        gender.Width = 60
-        ' 
-        ' email
-        ' 
-        email.HeaderText = "Email"
-        email.MinimumWidth = 6
-        email.Name = "email"
-        email.Width = 300
-        ' 
-        ' contactNumber
-        ' 
-        contactNumber.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
-        contactNumber.HeaderText = "Contact Number"
-        contactNumber.MinimumWidth = 6
-        contactNumber.Name = "contactNumber"' 
         ' Professors
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)

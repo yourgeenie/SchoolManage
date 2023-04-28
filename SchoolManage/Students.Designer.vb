@@ -39,6 +39,7 @@ Partial Class Students
         btnBackUp = New Button()
         btnLocate = New Button()
         txtLocate = New TextBox()
+        btnExport = New Button()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
@@ -171,17 +172,17 @@ Partial Class Students
         btnUpload.FlatStyle = FlatStyle.Flat
         btnUpload.Location = New Point(89, 172)
         btnUpload.Name = "btnUpload"
-        btnUpload.Size = New Size(231, 29)
+        btnUpload.Size = New Size(168, 29)
         btnUpload.TabIndex = 7
-        btnUpload.Text = "Upload Data"
+        btnUpload.Text = "Import Data"
         btnUpload.UseVisualStyleBackColor = True
         ' 
         ' btnBackUp
         ' 
         btnBackUp.FlatStyle = FlatStyle.Flat
-        btnBackUp.Location = New Point(335, 172)
+        btnBackUp.Location = New Point(438, 172)
         btnBackUp.Name = "btnBackUp"
-        btnBackUp.Size = New Size(231, 29)
+        btnBackUp.Size = New Size(168, 29)
         btnBackUp.TabIndex = 8
         btnBackUp.Text = "Back Up Data"
         btnBackUp.UseVisualStyleBackColor = True
@@ -189,25 +190,36 @@ Partial Class Students
         ' btnLocate
         ' 
         btnLocate.FlatStyle = FlatStyle.Flat
-        btnLocate.Location = New Point(583, 172)
+        btnLocate.Location = New Point(612, 172)
         btnLocate.Name = "btnLocate"
-        btnLocate.Size = New Size(231, 29)
+        btnLocate.Size = New Size(168, 29)
         btnLocate.TabIndex = 9
         btnLocate.Text = "Locate Data"
         btnLocate.UseVisualStyleBackColor = True
         ' 
         ' txtLocate
         ' 
-        txtLocate.Location = New Point(829, 172)
+        txtLocate.Location = New Point(786, 172)
         txtLocate.Name = "txtLocate"
-        txtLocate.Size = New Size(410, 27)
+        txtLocate.Size = New Size(453, 27)
         txtLocate.TabIndex = 10
+        ' 
+        ' btnExport
+        ' 
+        btnExport.FlatStyle = FlatStyle.Flat
+        btnExport.Location = New Point(264, 172)
+        btnExport.Name = "btnExport"
+        btnExport.Size = New Size(168, 29)
+        btnExport.TabIndex = 11
+        btnExport.Text = "Export Data"
+        btnExport.UseVisualStyleBackColor = True
         ' 
         ' Students
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(1331, 770)
+        Controls.Add(btnExport)
         Controls.Add(txtLocate)
         Controls.Add(btnLocate)
         Controls.Add(btnBackUp)
@@ -245,4 +257,5 @@ Partial Class Students
     Friend WithEvents btnBackUp As Button
     Friend WithEvents btnLocate As Button
     Friend WithEvents txtLocate As TextBox
+    Friend WithEvents btnExport As Button
 End Class
